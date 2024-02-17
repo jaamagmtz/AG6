@@ -1,4 +1,12 @@
 # Starter pipeline
+- task: CmdLine@2
+  inputs:
+    script: |
+      git config --global useremail "a22100039@unideh.edu.mx"
+      git config --global username "JoseAg87"
+      git checkout master
+      git add --all
+      git push https://$(GitHubPAT)@github.com/jaamagmtz/AG6.git
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
